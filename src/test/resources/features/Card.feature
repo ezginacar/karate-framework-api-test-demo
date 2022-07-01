@@ -1,4 +1,3 @@
-
 Feature: Create Card for the case study
 
   Background: Set required fileds
@@ -8,7 +7,6 @@ Feature: Create Card for the case study
 
   Scenario: Successful create 2 cards under the board
     * path PostCreateCard
-    * header Accept = 'application/json'
     * param key = apiKey
     * param token = accessToken
     * param name = getCardName()

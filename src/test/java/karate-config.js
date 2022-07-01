@@ -4,11 +4,10 @@ function fn() {
   if (!env) {
     env = 'test';
   }
-
   var config = {
     env: env,
     accessToken : ${accessToken},
-    apiKey : ${apiKey} ,
+    apiKey : ${apiKey},
     baseUrl: 'https://api.trello.com',
 
     //endpoints
@@ -27,6 +26,8 @@ function fn() {
   } else  {
     config.baseURL ='--------'
   }
+
+   karate.configure('headers', karate.read('header.js'));
 
    karate.configure('connectTimeout', 10000);
    karate.configure('readTimeout', 5000);

@@ -1,17 +1,17 @@
-@test
+@caseStudy
 Feature: Case study
 
   Background: Get required IDs - js libraries
-    * call read('Card.feature')
+
     * call read('faker-helpers.js')
     * url baseUrl
+    * call read('Card.feature')
 
 
   Scenario: Case Study (update one of card's name than remove cards and boards)
    * def endpoint = PutUpdateCard
    * def endpoint = endpoint.replace('${id}', cardID1)
    * path endpoint
-   * header Accept = 'application/json'
    * param token = accessToken
    * param key = apiKey
    * request ''
@@ -22,7 +22,6 @@ Feature: Case study
  
    * url baseUrl
    * path endpoint
-   * header Accept = 'application/json'
    * param token = accessToken
    * param key = apiKey
    * param name = getCardName()
@@ -33,18 +32,25 @@ Feature: Case study
     #delete created board, card
 
     * def endpoint2 = DeleteOrganization
-    * def endpoint2 = endpoint.replace('${id}', organizationID)
+    * def endpoint2 = endpoint2.replace('${id}', organizationID)
     * path endpoint2
-    * header Accept = 'application/json'
     * param token = accessToken
     * param key = apiKey
     * request ''
     * method delete
     * status 200
 
+   * def endpoint3 = DeleteBoard
+   * def endpoint3 = endpoint3.replace('${id}', boardID)
+   * path endpoint3
+   * param token = accessToken
+   * param key = apiKey
+   * request ''
+   * method delete
+   * status 200
+
    #assertion
     * path endpoint
-    * header Accept = 'application/json'
     * param token = accessToken
     * param key = apiKey
     * request ''
