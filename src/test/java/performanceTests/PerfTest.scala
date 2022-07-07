@@ -8,7 +8,7 @@ import scala.concurrent.duration._
 class PerfTest extends Simulation {
 
 
-  val caseStudy = scenario("case study performance test").exec(karateFeature("classpath:features/CaseStudy.feature@caseStudy"))
+  val caseStudy = scenario("case study performance test").exec(karateFeature("classpath:features/CaseStudy.feature"))
 
   setUp(
     caseStudy.inject(rampUsers(3) during (5))
