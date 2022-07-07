@@ -8,3 +8,6 @@ Case Study:
 3- Update card name of one of the cards than validate 
 4- Delete all created cards, boards
 
+
+
+>> Run gatling performance test with : mvn clean test-compile gatling:test
