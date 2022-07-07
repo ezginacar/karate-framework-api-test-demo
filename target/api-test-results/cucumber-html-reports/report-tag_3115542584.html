@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Tag: @caseStudy</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Trello</td>
+      <td>07 Jul 2022, 11:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@caseStudy</td>
+          <td      class="passed"    >39</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">39</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="2955123300">2.955</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3728801834.html">src/test/resources/features/CaseStudy.feature</a>
+    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.955</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Case Study (update one of card's name than remove cards and boards)</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint = PutUpdateCard</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint = endpoint.replace('${id}', cardID1)</span>
+
+  <span class="lead-duration duration">0.046</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path endpoint</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param token = accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param key = apiKey</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">request ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.513</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>11:14:44.335 request:
+1 &gt; GET https://api.trello.com/1/cards/62c695f39133f91712e8dc96?token=e23c998dac52c53e201eb580532f4dc77690afb1a539eb2c068ed79307589c21&amp;key=e2f4dc48ca5fe1543d15bf268ec6832a
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY
+1 &gt; Host: api.trello.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.15)
+
+11:14:44.842 response time in milliseconds: 503.34
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; Atl-Traceid: b8cbd535bf183b16
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 07 Jul 2022 08:14:44 GMT
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Pragma: no-cache
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Server: globaledge-envoy
+1 &lt; Set-Cookie: [dsc=c8edc61a4db8d46e83c305149f5a08ae535df7af76591b5f5f4b9a33e3c07397; Path=/; Expires=Sun, 10 Jul 2022 08:14:44 GMT; Secure, preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY; Path=/; HttpOnly]
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; Surrogate-Control: no-store
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Envoy-Upstream-Service-Time: 140
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 294
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 94
+1 &lt; X-Rate-Limit-Db-Query-Time-Interval-Ms: 600000
+1 &lt; X-Rate-Limit-Db-Query-Time-Max: 7200000
+1 &lt; X-Rate-Limit-Db-Query-Time-Remaining: 7199990
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 369
+1 &lt; X-Server-Time: 1657181684734
+1 &lt; X-Trello-Environment: Production
+1 &lt; X-Trello-Version: 1.141221.0
+1 &lt; X-Xss-Protection: 1; mode=block
+{&quot;checkItemStates&quot;:null,&quot;id&quot;:&quot;62c695f39133f91712e8dc96&quot;,&quot;badges&quot;:{&quot;attachmentsByType&quot;:{&quot;trello&quot;:{&quot;board&quot;:0,&quot;card&quot;:0}},&quot;location&quot;:false,&quot;votes&quot;:0,&quot;viewingMemberVoted&quot;:false,&quot;subscribed&quot;:false,&quot;fogbugz&quot;:&quot;&quot;,&quot;checkItems&quot;:0,&quot;checkItemsChecked&quot;:0,&quot;checkItemsEarliestDue&quot;:null,&quot;comments&quot;:0,&quot;attachments&quot;:0,&quot;description&quot;:false,&quot;due&quot;:null,&quot;dueComplete&quot;:false,&quot;start&quot;:null},&quot;closed&quot;:false,&quot;dueComplete&quot;:false,&quot;dateLastActivity&quot;:&quot;2022-07-07T08:14:43.607Z&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:{&quot;emoji&quot;:{}},&quot;due&quot;:null,&quot;dueReminder&quot;:null,&quot;email&quot;:null,&quot;idBoard&quot;:&quot;62c695f245efcd32162e101e&quot;,&quot;idChecklists&quot;:[],&quot;idList&quot;:&quot;62c695f253177e2575efb4ab&quot;,&quot;idMembers&quot;:[],&quot;idMembersVoted&quot;:[],&quot;idShort&quot;:1,&quot;idAttachmentCover&quot;:null,&quot;labels&quot;:[],&quot;idLabels&quot;:[],&quot;manualCoverAttachment&quot;:false,&quot;name&quot;:&quot;orange&quot;,&quot;pos&quot;:16384,&quot;shortLink&quot;:&quot;TSzfARgL&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/c/TSzfARgL&quot;,&quot;start&quot;:null,&quot;subscribed&quot;:false,&quot;url&quot;:&quot;https://trello.com/c/TSzfARgL/1-orange&quot;,&quot;cover&quot;:{&quot;idAttachment&quot;:null,&quot;color&quot;:null,&quot;idUploadedBackground&quot;:null,&quot;size&quot;:&quot;normal&quot;,&quot;brightness&quot;:&quot;dark&quot;,&quot;idPlugin&quot;:null},&quot;isTemplate&quot;:false,&quot;cardRole&quot;:null}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def cardNameBefore = $.name</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path endpoint</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param token = accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param key = apiKey</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param name = getCardName()</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">request ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">method put</span>
+
+  <span class="lead-duration duration">0.507</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>11:14:44.866 request:
+2 &gt; PUT https://api.trello.com/1/cards/62c695f39133f91712e8dc96?token=e23c998dac52c53e201eb580532f4dc77690afb1a539eb2c068ed79307589c21&amp;key=e2f4dc48ca5fe1543d15bf268ec6832a&amp;name=blue
+2 &gt; Accept: application/json
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 0
+2 &gt; Content-Type: text/plain; charset=UTF-8
+2 &gt; Cookie: dsc=c8edc61a4db8d46e83c305149f5a08ae535df7af76591b5f5f4b9a33e3c07397; preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY
+2 &gt; Host: api.trello.com
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.15)
+
+
+11:14:45.365 response time in milliseconds: 495.90
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; Atl-Traceid: 4ad3e61f7b55999c
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Thu, 07 Jul 2022 08:14:45 GMT
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Pragma: no-cache
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Server: globaledge-envoy
+2 &lt; Set-Cookie: preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY; Path=/; HttpOnly
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; Surrogate-Control: no-store
+2 &lt; Transfer-Encoding: chunked
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Envoy-Upstream-Service-Time: 182
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14999
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 293
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 93
+2 &lt; X-Rate-Limit-Db-Query-Time-Interval-Ms: 600000
+2 &lt; X-Rate-Limit-Db-Query-Time-Max: 7200000
+2 &lt; X-Rate-Limit-Db-Query-Time-Remaining: 7199990
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 368
+2 &lt; X-Server-Time: 1657181685266
+2 &lt; X-Trello-Environment: Production
+2 &lt; X-Trello-Version: 1.141221.0
+2 &lt; X-Xss-Protection: 1; mode=block
+{&quot;id&quot;:&quot;62c695f39133f91712e8dc96&quot;,&quot;badges&quot;:{&quot;attachmentsByType&quot;:{&quot;trello&quot;:{&quot;board&quot;:0,&quot;card&quot;:0}},&quot;location&quot;:false,&quot;votes&quot;:0,&quot;viewingMemberVoted&quot;:false,&quot;subscribed&quot;:false,&quot;fogbugz&quot;:&quot;&quot;,&quot;checkItems&quot;:0,&quot;checkItemsChecked&quot;:0,&quot;checkItemsEarliestDue&quot;:null,&quot;comments&quot;:0,&quot;attachments&quot;:0,&quot;description&quot;:false,&quot;due&quot;:null,&quot;dueComplete&quot;:false,&quot;start&quot;:null},&quot;checkItemStates&quot;:[],&quot;closed&quot;:false,&quot;dueComplete&quot;:false,&quot;dateLastActivity&quot;:&quot;2022-07-07T08:14:45.213Z&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:{&quot;emoji&quot;:{}},&quot;due&quot;:null,&quot;dueReminder&quot;:null,&quot;email&quot;:null,&quot;idBoard&quot;:&quot;62c695f245efcd32162e101e&quot;,&quot;idChecklists&quot;:[],&quot;idList&quot;:&quot;62c695f253177e2575efb4ab&quot;,&quot;idMembers&quot;:[],&quot;idMembersVoted&quot;:[],&quot;idShort&quot;:1,&quot;idAttachmentCover&quot;:null,&quot;labels&quot;:[],&quot;idLabels&quot;:[],&quot;manualCoverAttachment&quot;:false,&quot;name&quot;:&quot;blue&quot;,&quot;pos&quot;:16384,&quot;shortLink&quot;:&quot;TSzfARgL&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/c/TSzfARgL&quot;,&quot;start&quot;:null,&quot;subscribed&quot;:false,&quot;url&quot;:&quot;https://trello.com/c/TSzfARgL/1-blue&quot;,&quot;cover&quot;:{&quot;idAttachment&quot;:null,&quot;color&quot;:null,&quot;idUploadedBackground&quot;:null,&quot;size&quot;:&quot;normal&quot;,&quot;brightness&quot;:&quot;dark&quot;,&quot;idPlugin&quot;:null},&quot;isTemplate&quot;:false,&quot;cardRole&quot;:null}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">match response.name != cardNameBefore</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint2 = DeleteOrganization</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint2 = endpoint2.replace('${id}', organizationID)</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path endpoint2</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param token = accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param key = apiKey</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">request ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">0.677</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>11:14:45.383 request:
+3 &gt; DELETE https://api.trello.com/1/organizations/62c695f1573a77443b8ecb85?token=e23c998dac52c53e201eb580532f4dc77690afb1a539eb2c068ed79307589c21&amp;key=e2f4dc48ca5fe1543d15bf268ec6832a
+3 &gt; Accept: application/json
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Content-Length: 0
+3 &gt; Content-Type: text/plain; charset=UTF-8
+3 &gt; Cookie: dsc=c8edc61a4db8d46e83c305149f5a08ae535df7af76591b5f5f4b9a33e3c07397; preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY
+3 &gt; Host: api.trello.com
+3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.15)
+
+
+11:14:46.057 response time in milliseconds: 672.19
+3 &lt; 200
+3 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+3 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+3 &lt; Atl-Traceid: 202ccb4dc14ecdd9
+3 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+3 &lt; Content-Type: application/json; charset=utf-8
+3 &lt; Date: Thu, 07 Jul 2022 08:14:45 GMT
+3 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+3 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+3 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+3 &lt; Pragma: no-cache
+3 &lt; Referrer-Policy: strict-origin-when-cross-origin
+3 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+3 &lt; Server: globaledge-envoy
+3 &lt; Set-Cookie: preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY; Path=/; HttpOnly
+3 &lt; Strict-Transport-Security: max-age=63072000; preload
+3 &lt; Surrogate-Control: no-store
+3 &lt; Transfer-Encoding: chunked
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; X-Dns-Prefetch-Control: off
+3 &lt; X-Download-Options: noopen
+3 &lt; X-Envoy-Upstream-Service-Time: 420
+3 &lt; X-Frame-Options: DENY
+3 &lt; X-Permitted-Cross-Domain-Policies: none
+3 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+3 &lt; X-Rate-Limit-Action-Max: 15000
+3 &lt; X-Rate-Limit-Action-Remaining: 14999
+3 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+3 &lt; X-Rate-Limit-Api-Key-Max: 300
+3 &lt; X-Rate-Limit-Api-Key-Remaining: 292
+3 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+3 &lt; X-Rate-Limit-Api-Token-Max: 100
+3 &lt; X-Rate-Limit-Api-Token-Remaining: 92
+3 &lt; X-Rate-Limit-Db-Query-Time-Interval-Ms: 600000
+3 &lt; X-Rate-Limit-Db-Query-Time-Max: 7200000
+3 &lt; X-Rate-Limit-Db-Query-Time-Remaining: 7199990
+3 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+3 &lt; X-Rate-Limit-Member-Max: 375
+3 &lt; X-Rate-Limit-Member-Remaining: 367
+3 &lt; X-Server-Time: 1657181685989
+3 &lt; X-Trello-Environment: Production
+3 &lt; X-Trello-Version: 1.141221.0
+3 &lt; X-Xss-Protection: 1; mode=block
+{}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint3 = DeleteBoard</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def endpoint3 = endpoint3.replace('${id}', boardID)</span>
+
+  <span class="lead-duration duration">0.019</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path endpoint3</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param token = accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param key = apiKey</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">request ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">0.669</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>11:14:46.083 request:
+4 &gt; DELETE https://api.trello.com/1/boards/62c695f245efcd32162e101e?token=e23c998dac52c53e201eb580532f4dc77690afb1a539eb2c068ed79307589c21&amp;key=e2f4dc48ca5fe1543d15bf268ec6832a
+4 &gt; Accept: application/json
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Content-Length: 0
+4 &gt; Content-Type: text/plain; charset=UTF-8
+4 &gt; Cookie: dsc=c8edc61a4db8d46e83c305149f5a08ae535df7af76591b5f5f4b9a33e3c07397; preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY
+4 &gt; Host: api.trello.com
+4 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.15)
+
+
+11:14:46.749 response time in milliseconds: 664.85
+4 &lt; 200
+4 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+4 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+4 &lt; Access-Control-Allow-Origin: *
+4 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+4 &lt; Atl-Traceid: 1bcaa0d7c91fdee6
+4 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+4 &lt; Content-Type: application/json; charset=utf-8
+4 &lt; Date: Thu, 07 Jul 2022 08:14:46 GMT
+4 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+4 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+4 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+4 &lt; Pragma: no-cache
+4 &lt; Referrer-Policy: strict-origin-when-cross-origin
+4 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+4 &lt; Server: globaledge-envoy
+4 &lt; Set-Cookie: preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY; Path=/; HttpOnly
+4 &lt; Strict-Transport-Security: max-age=63072000; preload
+4 &lt; Surrogate-Control: no-store
+4 &lt; Transfer-Encoding: chunked
+4 &lt; X-Content-Type-Options: nosniff
+4 &lt; X-Dns-Prefetch-Control: off
+4 &lt; X-Download-Options: noopen
+4 &lt; X-Envoy-Upstream-Service-Time: 352
+4 &lt; X-Frame-Options: DENY
+4 &lt; X-Permitted-Cross-Domain-Policies: none
+4 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+4 &lt; X-Rate-Limit-Action-Max: 15000
+4 &lt; X-Rate-Limit-Action-Remaining: 14999
+4 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+4 &lt; X-Rate-Limit-Api-Key-Max: 300
+4 &lt; X-Rate-Limit-Api-Key-Remaining: 291
+4 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+4 &lt; X-Rate-Limit-Api-Token-Max: 100
+4 &lt; X-Rate-Limit-Api-Token-Remaining: 91
+4 &lt; X-Rate-Limit-Db-Query-Time-Interval-Ms: 600000
+4 &lt; X-Rate-Limit-Db-Query-Time-Max: 7200000
+4 &lt; X-Rate-Limit-Db-Query-Time-Remaining: 7199990
+4 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+4 &lt; X-Rate-Limit-Member-Max: 375
+4 &lt; X-Rate-Limit-Member-Remaining: 366
+4 &lt; X-Server-Time: 1657181686679
+4 &lt; X-Trello-Environment: Production
+4 &lt; X-Trello-Version: 1.141221.0
+4 &lt; X-Xss-Protection: 1; mode=block
+{&quot;_value&quot;:null}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path endpoint</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param token = accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">param key = apiKey</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">request ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.496</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>11:14:46.752 request:
+5 &gt; GET https://api.trello.com/1/cards/62c695f39133f91712e8dc96?token=e23c998dac52c53e201eb580532f4dc77690afb1a539eb2c068ed79307589c21&amp;key=e2f4dc48ca5fe1543d15bf268ec6832a
+5 &gt; Accept: application/json
+5 &gt; Accept-Encoding: gzip,deflate
+5 &gt; Connection: Keep-Alive
+5 &gt; Cookie: dsc=c8edc61a4db8d46e83c305149f5a08ae535df7af76591b5f5f4b9a33e3c07397; preAuthProps=s%3A5e0ce63c48923a5e17e14879%3AisEnterpriseAdmin%3Dfalse.%2Bap%2BiAsGVo9wGkMGyBy9Bpfk96XhXhW5U1YJeodUlYY
+5 &gt; Host: api.trello.com
+5 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.15)
+
+11:14:47.246 response time in milliseconds: 494.08
+5 &lt; 404
+5 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+5 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+5 &lt; Access-Control-Allow-Origin: *
+5 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+5 &lt; Atl-Traceid: 85009f815fd6b915
+5 &lt; Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+5 &lt; Content-Length: 37
+5 &lt; Content-Type: text/plain; charset=utf-8
+5 &lt; Date: Thu, 07 Jul 2022 08:14:47 GMT
+5 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+5 &lt; Expires: 0
+5 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+5 &lt; Pragma: no-cache
+5 &lt; Referrer-Policy: strict-origin-when-cross-origin
+5 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+5 &lt; Server: globaledge-envoy
+5 &lt; Strict-Transport-Security: max-age=63072000; preload
+5 &lt; Surrogate-Control: no-store
+5 &lt; X-Content-Type-Options: nosniff
+5 &lt; X-Dns-Prefetch-Control: off
+5 &lt; X-Download-Options: noopen
+5 &lt; X-Envoy-Upstream-Service-Time: 111
+5 &lt; X-Frame-Options: DENY
+5 &lt; X-Permitted-Cross-Domain-Policies: none
+5 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+5 &lt; X-Rate-Limit-Api-Key-Max: 300
+5 &lt; X-Rate-Limit-Api-Key-Remaining: 290
+5 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+5 &lt; X-Rate-Limit-Api-Token-Max: 100
+5 &lt; X-Rate-Limit-Api-Token-Remaining: 90
+5 &lt; X-Rate-Limit-Db-Query-Time-Interval-Ms: 600000
+5 &lt; X-Rate-Limit-Db-Query-Time-Max: 7200000
+5 &lt; X-Rate-Limit-Db-Query-Time-Remaining: 7199990
+5 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+5 &lt; X-Rate-Limit-Member-Max: 375
+5 &lt; X-Rate-Limit-Member-Remaining: 365
+5 &lt; X-Trello-Environment: Production
+5 &lt; X-Trello-Version: 1.141221.0
+5 &lt; X-Xss-Protection: 1; mode=block
+The requested resource was not found.</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">status 404</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
