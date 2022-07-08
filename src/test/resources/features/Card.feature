@@ -16,8 +16,6 @@ Feature: Create Card for the case study
     * match $.id == "#notnull"
     * def cardID1 = $.id
 
-    * print "kart ID1---", cardID1
-
     * url baseUrl
     * path PostCreateCard
     * header Accept = 'application/json'
@@ -29,8 +27,6 @@ Feature: Create Card for the case study
     * method post
     * match $.id == "#notnull"
     * def cardID2 = $.id
-
-    * print "kart ID2---", cardID2
 
 
 
