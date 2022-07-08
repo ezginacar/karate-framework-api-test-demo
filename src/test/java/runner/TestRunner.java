@@ -12,13 +12,13 @@ import utils.ReportUtil;
         features = "src/test/resources/features",
         tags = "@caseStudy"
 )
-public class TestRunner {
-
+ class TestRunner {
+    ReportUtil reportUtil = new ReportUtil();
     @Test
-    public void run(){
+    void run(){
         System.setProperty("karate.env", "test");
         Results results = Runner.parallel(getClass(), 1);
-        ReportUtil.generateReport(results.getReportDir());
+        reportUtil.generateReport(results.getReportDir());
         Assertions.assertEquals(0 , results.getFailCount());
 
 
