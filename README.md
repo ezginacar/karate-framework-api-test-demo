@@ -18,4 +18,5 @@ Case Study:
 4- Delete all created cards, boards
 
 >> Run gatling api performance test with -> mvn clean test-compile gatling:test -pl API
+
 >> Run api tests with -> mvn clean test -Dtest=TestRunner -pl API
