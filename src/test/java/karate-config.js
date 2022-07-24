@@ -1,9 +1,8 @@
 function fn() {
   var env = karate.env;
   karate.log('Test environment :', env);
-  if (!env) {
-    env = 'test';
-  }
+
+
   var config = {
     env: env,
     accessToken : ${accessToken},
@@ -21,16 +20,22 @@ function fn() {
     PostCreateList : '/1/lists'
 
   }
+  if (!env) {
+      env = 'test';
+    }
+
   if (env == 'test') {
-    config.baseURL ='https://trello.com'
-  } else  {
-    config.baseURL ='--------'
+    config.baseURL ='https://api.trello.com'
+  } else if(env == 'dev') {
+    // config.baseURL ='--------'
   }
 
    karate.configure('headers', karate.read('header.js'));
 
    karate.configure('connectTimeout', 10000);
    karate.configure('readTimeout', 5000);
+
+   karate.configure('report',{ showLog: true, showAllSteps: false })
 
   return config;
  }
