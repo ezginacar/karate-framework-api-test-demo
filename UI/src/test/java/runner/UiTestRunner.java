@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
         features = "src/test/resources/features",
         tags = "@case"
 )
-class UITestRunner {
+class UiTestRunner {
 
     @Test
     void run(){

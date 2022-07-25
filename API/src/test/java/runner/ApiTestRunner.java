@@ -12,7 +12,7 @@ import utils.ReportUtil;
         features = "src/test/resources/features",
         tags = "@caseStudy"
 )
- class TestRunner {
+ class ApiTestRunner {
     ReportUtil reportUtil = new ReportUtil();
     @Test
     void run(){
