@@ -1,12 +1,10 @@
 function fn(){
 
     var element = {
-        searchbox_input : ,
-        search_button : ,
-        search_result_label: ,
-        first_product_on_list:,
-        first_product_price_on_list:,
-
+        location_close_info_button : "#myLocation-close-info",
+        searchbox_input : "#searchData",
+        search_result_label: ".resultText",
+        first_product : "li.column:nth-child(1)>.columnContent",
     }
 
     return element;

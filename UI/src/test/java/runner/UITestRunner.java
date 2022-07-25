@@ -5,19 +5,16 @@ import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import utils.ReportUtil;
-
 
 @KarateOptions(
         features = "src/test/resources/features",
-        tags = "@caseStudy"
+        tags = "@case"
 )
- class TestRunner {
-    ReportUtil reportUtil = new ReportUtil();
+class UITestRunner {
+
     @Test
     void run(){
         Results results = Runner.parallel(getClass(), 1);
-        reportUtil.generateReport(results.getReportDir());
         Assertions.assertEquals(0 , results.getFailCount());
 
 

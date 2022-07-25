@@ -7,7 +7,7 @@ function fn() {
     env: env,
     baseUrl: 'https://n11.com',
     searchText: 'Singer tradition dikiş makinesi',
-    expectedMinPrice: '1500 TL'
+    expectedMinPrice: '1.900,00',
 
   }
   if (!env) {
@@ -26,7 +26,7 @@ function fn() {
 
    karate.configure('report',{ showLog: true, showAllSteps: false });
 
-   karate.configure('driver', {});
+   karate.configure('driver', { type: 'chrome' });
 
   return config;
  }
