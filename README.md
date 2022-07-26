@@ -4,6 +4,7 @@
 
 ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `Work in progress`
 
+>> Run ui tests with -> mvn clean test -Dtest=UiTestRunner -pl UI
 
 
 
@@ -19,4 +20,4 @@ Case Study:
 
 >> Run gatling api performance test with -> mvn clean test-compile gatling:test -pl API
 
->> Run api tests with -> mvn clean test -Dtest=TestRunner -pl API
+>> Run api tests with -> mvn clean test -Dtest=ApiTestRunner -pl API
