@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 
 @KarateOptions(
         features = "src/test/resources/features",
-        tags = "@case"
+        tags = "@case2"
 )
-class UiTestRunner {
+public class UiTestRunner {
 
     @Test
-    void run(){
+    public void run(){
         Results results = Runner.parallel(getClass(), 1);
         Assertions.assertEquals(0 , results.getFailCount());
 

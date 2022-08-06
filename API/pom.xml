@@ -53,8 +53,8 @@
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling.plugin.version}</version>
                 <configuration>
-                    <simulationsFolder>src/test/java</simulationsFolder>
-                    <!--configFolder>src/test/resources</configFolder-->
+                    <simulationsFolder>${project.basedir}/src/test/java</simulationsFolder>
+                    <configFolder>${project.basedir}/src/test/resources</configFolder>
                     <includes>
                         <include>performanceTests.PerfTest</include>
 

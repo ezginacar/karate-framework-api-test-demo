@@ -14,6 +14,7 @@ import utils.ReportUtil;
 )
  class ApiTestRunner {
     ReportUtil reportUtil = new ReportUtil();
+
     @Test
     void run(){
         Results results = Runner.parallel(getClass(), 1);

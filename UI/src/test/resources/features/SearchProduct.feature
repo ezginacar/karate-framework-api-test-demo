@@ -21,7 +21,7 @@ Feature:
     """
 
 
- @case
+ @case2
   Scenario:
     * input(searchbox_input, searchText + Key.ENTER)
     * waitFor(search_result_label)
@@ -34,7 +34,7 @@ Feature:
     * def actualPrice = text(a).split(' TL')
     * def actualPrice = actualPrice[0]
 
-    * eval if( actualPrice.valueOf() <= expectedMinPrice.valueOf()) karate.fail("istenen fiyatta ürün bulunamadı...en ucuz ürün fiyatı->{actualPrice}, belirlediğin en düşük fiyat->{expectedMinPrice}")
+    * eval if( actualPrice.valueOf() <= expectedMinPrice.valueOf()) karate.fail("istenen fiyatta ürün bulunamadı...en ucuz ürün fiyatı->${actualPrice}, belirlediğin en düşük fiyat->${expectedMinPrice}")
     * def locator = call findLink productID
     * def productLink = attribute(locator, 'href')
     * print 'LINK>>' + productLink
