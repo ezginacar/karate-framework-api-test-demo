@@ -33,38 +33,38 @@ import groovy.json.JsonSlurper
 
                 ${workspace}
                 <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> WORKSPACE : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${workspace}></a>${workspace}</b></td>
-                </tr>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Adress </td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href="${workspace}/API/target/surefire-reports/results-json.txt"></a>${workspace}/API/target/surefire-reports/results-json.txt</b></td>
+        </tr>
 
+                <tr>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${build.url}></a>${build.url}</b></td>
+                </tr>
         <tr>
-        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
-                    <td style="border: 1px solid #E0DBDB;"><b><a href=${build.url}></a>${build.url}</b></td>
+        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href="${project.url}">${project.url}</a></b></td>
         </tr>
                 <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href="${project.url}">${project.url}</a></b></td>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
+<td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
                 </tr>
         <tr>
-        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
-                    <td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
+        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Date of build : </td>
+                    <td style="border: 1px solid #E0DBDB;">${it.timestampString}</td>
         </tr>
                 <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Date of build : </td>
-<td style="border: 1px solid #E0DBDB;">${it.timestampString}</td>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build duration : </td>
+<td style="border: 1px solid #E0DBDB;">${build.durationString}</td>
                 </tr>
         <tr>
-        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build duration : </td>
-                    <td style="border: 1px solid #E0DBDB;">${build.durationString}</td>
-</tr>
-                <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href="${build.url}"> Click here to see Console Output</a></b></td>
-                </tr>
-</tbody>
-        </table>
+        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href="${build.url}"> Click here to see Console Output</a></b></td>
+        </tr>
+            </tbody>
+</table>
 
 
-        </div>
-</body>
+    </div>
+        </body>
 </html>
