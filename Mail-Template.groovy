@@ -31,7 +31,7 @@
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${BUILD_URL}></a>${build.url}</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${build.url}></a>${build.url}</b></td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
@@ -39,7 +39,7 @@
         </tr>
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
-        <td style="border: 1px solid #E0DBDB;"> ${BUILD_NUMBER} </td>
+        <td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Date of build : </td>
@@ -51,7 +51,7 @@
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
-                    <td style="border: 1px solid #E0DBDB;"><b><a href="${BUILD_URL}"> Click here to see Console Output</a></b></td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href="${build.url}"> Click here to see Console Output</a></b></td>
         </tr>
             </tbody>
 </table>
