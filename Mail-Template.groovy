@@ -33,7 +33,7 @@ import groovy.json.JsonSlurper
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${BUILD_URL}></a>${BUILD_URL}</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${BUILD_URL}></a>${build.url}</b></td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
@@ -59,10 +59,12 @@ import groovy.json.JsonSlurper
             </tbody>
 </table>
 
-        <%String jsonString = new File("http://10.2.3.23:8080/job/test-automation/view/OPPC/job/oppc_api_automation_test/ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
+        <%
+        String jsonString = new File(${build.url}+"/ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
 def parser = new JsonSlurper()
 def testsuite = parser.parseText(jsonString);
-def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))%>
+def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))
+        %>
 
 
         <table style="width:100%; border-collapse: collapse;">
