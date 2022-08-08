@@ -31,10 +31,9 @@ import groovy.json.JsonSlurper
         </thead>
             <tbody>
 
-                ${workspace}
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Adress </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href="${workspace}/API/target/surefire-reports/results-json.txt"></a>${workspace}/API/target/surefire-reports/results-json.txt</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${project.url}+"/ws/API/target/surefire-reports/results-json.txt""></a>"${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"</b></td>
         </tr>
 
                 <tr>
@@ -44,10 +43,10 @@ import groovy.json.JsonSlurper
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
                     <td style="border: 1px solid #E0DBDB;"><b><a href="${project.url}">${project.url}</a></b></td>
-        </tr>
+</tr>
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
-<td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
+        <td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Date of build : </td>
@@ -61,10 +60,24 @@ import groovy.json.JsonSlurper
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
                     <td style="border: 1px solid #E0DBDB;"><b><a href="${build.url}"> Click here to see Console Output</a></b></td>
         </tr>
-            </tbody>
-</table>
+
+                <%String jsonString = new File("${project.url}"+"/ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
+def parser = new JsonSlurper()
+def testsuite = parser.parseText(jsonString);
+def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))%>
+        <tr>
+        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Scenario Count</td>
+                    <td style="border: 1px solid #E0DBDB;"> <%Integer.valueOf(testsuite.getAt("scenarios")%></td>
+        </tr>
+
+                <tr>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Pass Count</td>
+<td style="border: 1px solid #E0DBDB;"> <%Integer.valueOf(testsuite.getAt("passed")%></td>
+                </tr>
+        </tbody>
+        </table>
 
 
-    </div>
-        </body>
-</html>
+        </div>
+</body>
+        </html>
