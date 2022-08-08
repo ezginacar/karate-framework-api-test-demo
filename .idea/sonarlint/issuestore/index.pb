@@ -11,8 +11,6 @@ Q
 !UI/src/test/java/karate-config.js,f\2\f2705cf705071f4208098c6a466d1bb896ae1588
 R
 "API/src/test/java/karate-config.js,8\a\8a173d77371a640f673cf52757b9d0d41cf205d3
-W
-'API/src/test/java/utils/ReportUtil.java,c\1\c12c7a97ef7a357d105792fddca3ccdac986e89a
 \
 ,API/src/test/resources/features/Test.feature,3\e\3e8beac36c5956e61dc32f394828706ad2c74bc0
 K
