@@ -63,7 +63,7 @@ import groovy.json.JsonSlurper
 
                <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Environment : </td>
-<td style="border: 1px solid #E0DBDB;">${Env} </td>
+<td style="border: 1px solid #E0DBDB;">$Env </td>
                 </tr>
 
         </tbody>
