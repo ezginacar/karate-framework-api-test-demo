@@ -33,16 +33,16 @@ import groovy.json.JsonSlurper
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Adress </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${project.url}+"/ws/API/target/surefire-reports"></a>"${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}${project.url}+"/ws/API/target/surefire-reports"></a>"${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"</b></td>
         </tr>
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${build.url}></a>${build.url}</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}${build.url}></a>${build.url}</b></td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
-                    <td style="border: 1px solid #E0DBDB;"><b><a href="${project.url}">${project.url}</a></b></td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}"${project.url}">${project.url}</a></b></td>
 </tr>
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
@@ -58,18 +58,18 @@ import groovy.json.JsonSlurper
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
-                    <td style="border: 1px solid #E0DBDB;"><b><a href="${build.url}"> Click here to see Console Output</a></b></td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${build.url}"> Click here to see Console Output</a></b></td>
         </tr>
 
-               <tr>
+                <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Environment : </td>
-<td style="border: 1px solid #E0DBDB;"><%${params.Env}%> </td>
+<td style="border: 1px solid #E0DBDB;"><${rooturl}${build.url}+ "parameters/" </td>
                 </tr>
 
         </tbody>
         </table>
 
 
-        </div>
+</div>
 </body>
-</html>
+        </html>
