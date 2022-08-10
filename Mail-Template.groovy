@@ -110,16 +110,17 @@ def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(t
 
 
         <tr>
-        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
+                    <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
+                    <td style="border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("scenarios")) %> </td>
 
-                </tr>
-        </tbody>
-
-
-
+        </tr>
+            </tbody>
 
 
 
-    </div>
-        </body>
-</html>
+
+
+
+        </div>
+</body>
+        </html>
