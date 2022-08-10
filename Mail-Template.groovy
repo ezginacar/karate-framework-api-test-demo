@@ -61,18 +61,23 @@ import groovy.json.JsonSlurper
         <b><a href="${rooturl}${build.url}"> Click here to see Console Output</a></b>
         </td><!--API/target/karate.log-->
         </tr>
+
+                <tr>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
+<td style="border: 1px solid #E0DBDB;"><b><a href="${workspace}"></a>${workspace}/</b></td>
+        </tr>
             </tbody>
-</table>
+        </table>
 
         <%
         def url = "${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt";
-def jsonString = new File("${url}").getText('UTF-8')
-
-%>
 
 
+        %>
 
-<table style="width:100%; border-collapse: collapse;">
+
+
+        <table style="width:100%; border-collapse: collapse;">
         <thead style="text-align: center;">
         <tr style="color:#fff; background-color:#1C4771;">
         <th style="border: 1px solid #E0DBDB;" colspan="6"><h4><b> Test Summary</b></h4></th>
@@ -90,17 +95,16 @@ def jsonString = new File("${url}").getText('UTF-8')
 
 
         <tr>
-        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString.toString()) %> </td>
-                    <td style="border: 1px solid #E0DBDB;"> <% println(url) %> </td>
+        <td style="border: 1px solid #E0DBDB;"> <% println(${url}) %> </td>
 
-        </tr>
-            </tbody>
-
+                </tr>
+        </tbody>
 
 
 
 
 
-        </div>
-</body>
-        </html>
+
+    </div>
+        </body>
+</html>
