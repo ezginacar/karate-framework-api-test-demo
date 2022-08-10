@@ -81,8 +81,7 @@ import groovy.json.JsonSlurper
 
 
                 <tr>
-                    <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
-                    <td style="border: 1px solid #E0DBDB;"> <%xx%> </td>
+                    <td style="border: 1px solid #E0DBDB;"> <%xx.toString()%> </td>
 
         </tr>
             </tbody>
