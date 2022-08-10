@@ -72,7 +72,7 @@ import groovy.json.JsonSlurper
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
-<td style="border: 1px solid #E0DBDB;"><b><a href="${workspace}"></a>${workspace}/</b></td>
+<td style= "border: 1px solid #E0DBDB;"><b ><a href="${workspace}"></a>${workspace}/</b></td>
         </tr>
             </tbody>
         </table>
@@ -110,17 +110,20 @@ def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(t
 
 
         <tr>
-                    <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
+        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
                     <td style="border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("scenarios")) %> </td>
+        <td style="color:red; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("failed")) %> </td>
+                    <td style="color:green; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("passed")) %> </td>
+        <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <% println(skipped) %> </td>
 
-        </tr>
-            </tbody>
+                </tr>
+        </tbody>
 
 
 
 
 
 
-        </div>
-</body>
-        </html>
+    </div>
+        </body>
+</html>
