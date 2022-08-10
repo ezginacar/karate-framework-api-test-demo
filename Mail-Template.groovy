@@ -64,7 +64,7 @@ import groovy.json.JsonSlurper
             </tbody>
 </table>
 
-        <%def xx = "${rooturl}${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"%>
+        <%def xx = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt"%>
 
 
         <table style="width:100%; border-collapse: collapse;">
