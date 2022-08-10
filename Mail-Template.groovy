@@ -69,7 +69,11 @@ import groovy.json.JsonSlurper
         </tbody>
         </table>
 
-<%String jsonString = new File("${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
+
+
+<%
+String url= ${rooturl}${project.url}
+String jsonString = new File(url + "ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
 def parser = new JsonSlurper()
 def testsuite = parser.parseText(jsonString)
 def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))%>
