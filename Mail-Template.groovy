@@ -33,20 +33,20 @@ import groovy.json.JsonSlurper
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Adress </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${project.url}ws/API/target/surefire-reports"></a>"${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt"</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${project.url}ws/API/target/surefire-reports"></a>${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt</b></td>
         </tr>
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build URL : </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}${build.url}></a>${build.url}</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}${build.url}></a>${rooturl}${build.url}</b></td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
                     <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${project.url}">"${rooturl}${project.url}</a></b></td>
-</tr>
+        </tr>
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
-        <td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
+<td style="border: 1px solid #E0DBDB;"> ${build.number} </td>
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Date of build : </td>
@@ -69,6 +69,41 @@ import groovy.json.JsonSlurper
         </tbody>
         </table>
 
+
+
+<%
+
+String jsonString = new File("${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt").getText('UTF-8')
+def parser = new JsonSlurper()
+def testsuite = parser.parseText(jsonString)
+def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))%>
+
+
+        <table style="width:100%; border-collapse: collapse;">
+        <thead style="text-align: center;">
+        <tr style="color:#fff; background-color:#1C4771;">
+        <th style="border: 1px solid #E0DBDB;" colspan="7"><h4><b> Test Summary</b></h4></th>
+                </tr>
+        <tr style="color:#fff; background-color:#1C4771;">
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
+                </tr>
+        </thead>
+            <tbody style="text-align: center;">
+
+
+                <tr>
+                    <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
+                    <td style="border: 1px solid #E0DBDB;"> <%testsuite.getAt("scenarios")%> </td>
+        <td style="color:red; border: 1px solid #E0DBDB;"> <%testsuite.getAt("failed")%> </td>
+                    <td style="color:green; border: 1px solid #E0DBDB;"> <%testsuite.getAt("passed")%> </td>
+        <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <%skipped%> </td>
+                    <td style="border: 1px solid #E0DBDB;"><%(Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100)%></td>
+        </tr>
+            </tbody>
 
 
 
