@@ -78,7 +78,7 @@ import groovy.json.JsonSlurper
         </table>
 
         <%
-        def url = "${workspace}API/target/surefire-reports/results-json.txt";
+        def url = "${workspace}/API/target/surefire-reports/results-json.txt";
 def jsonString = new File("${url}").getText('UTF-8')
 
 
