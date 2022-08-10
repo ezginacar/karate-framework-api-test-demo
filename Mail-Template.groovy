@@ -66,7 +66,7 @@ import groovy.json.JsonSlurper
 
         <%
         def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt";
-String jsonString = new File(url).getText('UTF-8')
+String jsonString = new File("${url}").getText('UTF-8')
 
 %>
 
@@ -91,6 +91,11 @@ String jsonString = new File(url).getText('UTF-8')
         <td style="border: 1px solid #E0DBDB;"> <%println(url)%> </td>
 
             </tbody>
+
+
+
+
+
 
         </div>
 </body>
