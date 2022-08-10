@@ -62,8 +62,8 @@ import groovy.json.JsonSlurper
         </tr>
 
                 <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Environment : </td>
-<td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${build.url}parameters"> ${rooturl}${build.url}+parameters</a></b></td>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Environment Info : </td>
+<td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${build.url}parameters"> ${rooturl}${build.url}parameters</a></b></td>
                 </tr>
 
         </tbody>
