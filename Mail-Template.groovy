@@ -80,6 +80,10 @@ import groovy.json.JsonSlurper
         <%
         def url = "${workspace}/API/target/surefire-reports/results-json.txt";
 def jsonString = new File("${url}").getText('UTF-8')
+def parser = new JsonSlurper()
+def testsuite = parser.parseText(jsonString)
+def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))
+
 
 
 %>
@@ -92,33 +96,27 @@ def jsonString = new File("${url}").getText('UTF-8')
         <th style="border: 1px solid #E0DBDB;" colspan="6"><h4><b> Test Summary</b></h4></th>
                 </tr>
         <tr style="color:#fff; background-color:#1C4771;">
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total1</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
-        <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
+
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
+                </tr>
+        </thead>
+            <tbody style="text-align: center;">
+
+
+                <tr>
+                    <td style="border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("scenarios")) %> </td>
+        <td style="color:red; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("failed")) %> </td>
+                    <td style="color:green; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("passed")) %> </td>
+        <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <% println(skipped) %> </td>
+                    <td style="border: 1px solid #E0DBDB;"><% println((Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100) %></td>
         </tr>
-            </thead>
-        <tbody style="text-align: center;">
+            </tbody>
 
 
-        <tr>
-        <td style="border: 1px solid #E0DBDB;"> <% println(${url}) %> </td>
-
-                </tr>
-
-        <tr>
-        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString.toString()) %> </td>
-
-                </tr>
-        </tbody>
-
-
-
-
-
-
-    </div>
-        </body>
-</html>
+        </div>
+</body>
+        </html>
