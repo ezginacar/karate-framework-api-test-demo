@@ -66,13 +66,13 @@ import groovy.json.JsonSlurper
 
         <%
         def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt";
-String jsonString = new File("${url}").getText('UTF-8')
+        //String jsonString = new File("${url}").getText('UTF-8');
 
-%>
+        %>
 
 
 
-<table style="width:100%; border-collapse: collapse;">
+        <table style="width:100%; border-collapse: collapse;">
         <thead style="text-align: center;">
         <tr style="color:#fff; background-color:#1C4771;">
         <th style="border: 1px solid #E0DBDB;" colspan="7"><h4><b> Test Summary</b></h4></th>
@@ -87,7 +87,6 @@ String jsonString = new File("${url}").getText('UTF-8')
 
 
         <tr>
-        <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
         <td style="border: 1px solid #E0DBDB;"> <%println(url)%> </td>
 
             </tbody>
