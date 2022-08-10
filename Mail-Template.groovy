@@ -33,7 +33,7 @@ import groovy.json.JsonSlurper
 
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Adress </td>
-        <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}${project.url}+"/ws/API/target/surefire-reports"></a>"${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"</b></td>
+        <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${project.url}ws/API/target/surefire-reports"></a>"${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt"</b></td>
         </tr>
 
                 <tr>
@@ -42,7 +42,7 @@ import groovy.json.JsonSlurper
                 </tr>
         <tr>
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
-                    <td style="border: 1px solid #E0DBDB;"><b><a href=${rooturl}"${project.url}">${project.url}</a></b></td>
+                    <td style="border: 1px solid #E0DBDB;"><b><a href="${rooturl}${project.url}">"${rooturl}${project.url}</a></b></td>
 </tr>
                 <tr>
                     <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build No : </td>
