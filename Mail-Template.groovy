@@ -55,11 +55,19 @@ import groovy.json.JsonSlurper
         <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build duration : </td>
                     <td style="border: 1px solid #E0DBDB;">${build.durationString}</td>
         </tr>
+
                 <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
+                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Build Parameters : </td>
 <td style="border: 1px solid #E0DBDB;">
-        <b><a href="${rooturl}${build.url}"> Click here to see Console Output</a></b>
-        </td><!--API/target/karate.log-->
+        <b><a href="${rooturl}${build.url}parameters/"> See environment variables </a></b>
+        </td>
+                </tr>
+
+<tr>
+        <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Detailed Result : </td>
+                    <td style="border: 1px solid #E0DBDB;">
+                        <b><a href="${rooturl}${build.url}"> Click here to see Console Output</a></b>
+                    </td><!--API/target/karate.log-->
         </tr>
 
                 <tr>
@@ -70,14 +78,15 @@ import groovy.json.JsonSlurper
         </table>
 
         <%
-        def url = "${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt";
+        def url = "${workspace}API/target/surefire-reports/results-json.txt";
+def jsonString = new File("${url}").getText('UTF-8')
 
 
-        %>
+%>
 
 
 
-        <table style="width:100%; border-collapse: collapse;">
+<table style="width:100%; border-collapse: collapse;">
         <thead style="text-align: center;">
         <tr style="color:#fff; background-color:#1C4771;">
         <th style="border: 1px solid #E0DBDB;" colspan="6"><h4><b> Test Summary</b></h4></th>
@@ -96,6 +105,11 @@ import groovy.json.JsonSlurper
 
         <tr>
         <td style="border: 1px solid #E0DBDB;"> <% println(${url}) %> </td>
+
+                </tr>
+
+        <tr>
+        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString.toString()) %> </td>
 
                 </tr>
         </tbody>
