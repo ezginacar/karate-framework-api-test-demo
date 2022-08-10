@@ -70,12 +70,9 @@ import groovy.json.JsonSlurper
                     </td><!--API/target/karate.log-->
         </tr>
 
-                <tr>
-                    <td style="font-weight:bold; border: 1px solid #E0DBDB;"> Project URL : </td>
-<td style= "border: 1px solid #E0DBDB;"><b ><a href="${workspace}"></a>${workspace}/</b></td>
-        </tr>
+              
             </tbody>
-        </table>
+</table>
 
         <%
         def url = "${workspace}/API/target/surefire-reports/results-json.txt";
@@ -97,33 +94,34 @@ def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(t
                 </tr>
         <tr style="color:#fff; background-color:#1C4771;">
 
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">JSon String</th>
-
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
-        <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
-        </tr>
-            </thead>
-        <tbody style="text-align: center;">
 
 
-        <tr>
-        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
+                </tr>
+        </thead>
+            <tbody style="text-align: center;">
+
+
+                <tr>
                     <td style="border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("scenarios")) %> </td>
         <td style="color:red; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("failed")) %> </td>
                     <td style="color:green; border: 1px solid #E0DBDB;"> <% println(testsuite.getAt("passed")) %> </td>
         <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <% println(skipped) %> </td>
-
-                </tr>
-        </tbody>
+                    <td style="border: 1px solid #E0DBDB;"><% println((Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100) %></td>
 
 
+        </tr>
+            </tbody>
 
 
 
 
-    </div>
-        </body>
-</html>
+
+
+        </div>
+</body>
+        </html>
