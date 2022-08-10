@@ -64,7 +64,7 @@ import groovy.json.JsonSlurper
             </tbody>
 </table>
 
-        <%def url = "${rooturl}${project.url}"+"/ws/API/target/surefire-reports/results-json.txt"
+        <%def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt"
 String jsonString = new File(url).getText('UTF-8')
 def parser = new JsonSlurper()
 def testsuite = parser.parseText(jsonString)
@@ -94,9 +94,13 @@ def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(t
         <td style="color:red; border: 1px solid #E0DBDB;"> <%println(testsuite.getAt("failed"))%> </td>
                     <td style="color:green; border: 1px solid #E0DBDB;"> <%println(testsuite.getAt("passed"))%> </td>
         <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <%println(skipped)%> </td>
-                    <td style="border: 1px solid #E0DBDB;"><%println((Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100))%></td>
+                    <td style="border: 1px solid #E0DBDB;"><%println((Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100)%></td>
         </tr>
             </tbody>
+
+
+
+
 
 
         </div>
