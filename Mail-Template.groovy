@@ -81,7 +81,7 @@ import groovy.json.JsonSlurper
 
 
                 <tr>
-                    <td style="border: 1px solid #E0DBDB;"> <%xx.toString()%> </td>
+                    <td style="border: 1px solid #E0DBDB;"> <%println(xx.toString())%> </td>
 
         </tr>
             </tbody>
