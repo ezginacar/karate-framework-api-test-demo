@@ -64,12 +64,8 @@ import groovy.json.JsonSlurper
             </tbody>
 </table>
 
-        <%def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt"
-String jsonString = new File(url).getText('UTF-8')
-def parser = new JsonSlurper()
-def testsuite = parser.parseText(jsonString)
-def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) + Integer.valueOf(testsuite.getAt("passed")))
-        %>
+        <%def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt"%>
+
 
 
         <table style="width:100%; border-collapse: collapse;">
@@ -80,29 +76,20 @@ def skipped = Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(t
         <tr style="color:#fff; background-color:#1C4771;">
         <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
                     <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
-                </tr>
-        </thead>
-            <tbody style="text-align: center;">
 
-
-                <tr>
-                    <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
-                    <td style="border: 1px solid #E0DBDB;"> <%println(testsuite.getAt("scenarios"))%> </td>
-        <td style="color:red; border: 1px solid #E0DBDB;"> <%println(testsuite.getAt("failed"))%> </td>
-                    <td style="color:green; border: 1px solid #E0DBDB;"> <%println(testsuite.getAt("passed"))%> </td>
-        <td style="color:#FF7F00; border: 1px solid #E0DBDB;"> <%println(skipped)%> </td>
-                    <td style="border: 1px solid #E0DBDB;"><%println((Integer.valueOf(testsuite.getAt("scenarios")) - (Integer.valueOf(testsuite.getAt("failed")) - skipped  * 100)%></td>
         </tr>
-            </tbody>
+            </thead>
+        <tbody style="text-align: center;">
 
 
+        <tr>
+        <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
+        <td style="border: 1px solid #E0DBDB;"> <%println(url)%> </td>
+                    <td style="color:red; border: 1px solid #E0DBDB;"> <%url%> </td>
+
+        </tbody>
 
 
-
-
-        </div>
-</body>
-        </html>
+    </div>
+        </body>
+</html>
