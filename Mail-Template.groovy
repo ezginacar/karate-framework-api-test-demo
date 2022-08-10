@@ -65,30 +65,35 @@ import groovy.json.JsonSlurper
 </table>
 
         <%
-        def url = "${rooturl}${project.url}/ws/API/target/surefire-reports/results-json.txt";
-        //String jsonString = new File("${url}").getText('UTF-8');
+        def url = "${rooturl}${project.url}ws/API/target/surefire-reports/results-json.txt";
+String jsonString = new File("${url}").getText('UTF-8')
 
-        %>
+%>
 
 
 
-        <table style="width:100%; border-collapse: collapse;">
+<table style="width:100%; border-collapse: collapse;">
         <thead style="text-align: center;">
         <tr style="color:#fff; background-color:#1C4771;">
-        <th style="border: 1px solid #E0DBDB;" colspan="7"><h4><b> Test Summary</b></h4></th>
+        <th style="border: 1px solid #E0DBDB;" colspan="6"><h4><b> Test Summary</b></h4></th>
                 </tr>
         <tr style="color:#fff; background-color:#1C4771;">
-        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
-                    <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
-
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total1</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Total</th>
+        <th style="font-weight:bold; border: 1px solid #E0DDB;">Failed</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Passed</th>
+        <th style="font-weight:bold; border: 1px solid #E0DBDB;">Skipped</th>
+                    <th style="font-weight:bold; border: 1px solid #E0DBDB;">Pass %</th>
         </tr>
             </thead>
         <tbody style="text-align: center;">
 
 
         <tr>
-        <td style="border: 1px solid #E0DBDB;"> <%println(url)%> </td>
+        <td style="border: 1px solid #E0DBDB;"> <% println(jsonString) %> </td>
+                    <td style="border: 1px solid #E0DBDB;"> <% println(url) %> </td>
 
+        </tr>
             </tbody>
 
 
