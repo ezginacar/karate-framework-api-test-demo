@@ -89,11 +89,9 @@ String jsonString = new File(url).getText('UTF-8')
         <tr>
         <!--Aşağıda Automation_Environment ve Tag_Group değişkenleri build alınmadan önce seçim yaptığım parametre değerlerini temsil ediyor -->
         <td style="border: 1px solid #E0DBDB;"> <%println(url)%> </td>
-                    <td style="color:red; border: 1px solid #E0DBDB;"> <% println(jsonString)%> </td>
 
-        </tbody>
+            </tbody>
 
-
-    </div>
-        </body>
-</html>
+        </div>
+</body>
+        </html>
